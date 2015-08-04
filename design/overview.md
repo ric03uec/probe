@@ -13,17 +13,17 @@ Following features have to be implemented
 In an attempt to adhere to "separation of concerns" philosophy, we'll try to
 keep each component in a module
 
-Command Parser
---
+Command Parser  
+==
 - Entrypoint for the application
 - supports following commands
 
-Storage
---
+Storage  
+==
 - expose API to abstract out getting/setting of storage data
-- create a .probeconfig directory in ~/home directory
+- create a .probeconfig directory in `~/home directory`
 - store a `config` object `~/home/.probeconfig/config` in json format
-  ```
+```
   {
     "userContext":{
       "github": {
@@ -54,12 +54,12 @@ Storage
       }
     }
   }
-  ```
+```
 - prompt user for profile info if not present
 - execute all commands within a profile context
 
 Syncer
---
+==
 - expose API to synchronize content with the provider(github for now)
 - support following calls
   - listRemotes()
@@ -71,7 +71,7 @@ Syncer
   - rejectRequest(rejectObj)
 
 Actor
---
+==
 - expose API to execute commands in current directory
 - support following calls
   - list-remotes
