@@ -67,6 +67,11 @@ func main() {
 			Action: setRemote,
 		},
 		{
+			Name:   "status",
+			Usage:  "current branch status",
+			Action: setRemote,
+		},
+		{
 			Name:  "list",
 			Usage: "view pull requests",
 			Subcommands: []cli.Command{
