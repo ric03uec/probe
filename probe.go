@@ -27,49 +27,44 @@ func main() {
 				{
 					Name:   "remote",
 					Usage:  "Set remote context for current project",
-					Action: setRemote,
+					Action: SetRemote,
 				},
 				{
 					Name:   "token",
 					Usage:  "Set access token for current user",
-					Action: setRemote,
+					Action: SetToken,
 				},
 			},
 		},
 		{
 			Name:   "view",
 			Usage:  "View specific pull request",
-			Action: setRemote,
+			Action: SetViewPR,
 		},
 		{
 			Name:   "apply",
 			Usage:  "Apply specific pull request",
-			Action: setRemote,
+			Action: SetApplyPR,
 		},
 		{
 			Name:   "sync",
 			Usage:  "Sync pull requests",
-			Action: setRemote,
+			Action: SetSync,
 		},
 		{
 			Name:   "approve",
 			Usage:  "Approve current pull request",
-			Action: setRemote,
+			Action: SetApprovePR,
 		},
 		{
 			Name:   "reject",
 			Usage:  "Reject current pull request",
-			Action: setRemote,
+			Action: SetRejectPR,
 		},
 		{
 			Name:   "comment",
 			Usage:  "Comment on current pull request",
-			Action: setRemote,
-		},
-		{
-			Name:   "status",
-			Usage:  "current branch status",
-			Action: setRemote,
+			Action: SetPRComment,
 		},
 		{
 			Name:  "list",
@@ -78,12 +73,12 @@ func main() {
 				{
 					Name:   "remote",
 					Usage:  "View all remote",
-					Action: listPr,
+					Action: ListPRRemote,
 				},
 				{
 					Name:   "local",
 					Usage:  "View all local",
-					Action: listPr,
+					Action: ListPRLocal,
 				},
 			},
 		},
