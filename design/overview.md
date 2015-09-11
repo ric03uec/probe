@@ -17,6 +17,17 @@ Command Parser
 ==
 - Entrypoint for the application
 - supports following commands
+- `set` : set project context
+  subcommands:
+    `set remote <remote name>` // remote location for pulling data from, "origin", by default
+    `set token <access token>` // access token for GH/BB
+- `view <pr id>`: view pull request data
+- `apply <pr id>`: patch the current branch with specified PR id
+- `sync`: sync the pull request data
+- `approve`: approve the currently patched PR // PR cannot be approved/rejected before `apply`ing
+- `reject` : reject the currently patched PR  // PR cannot be approved/rejected before `apply`ing
+- `comment`: add a comment to patched PR      // PR cannot be commented on before `apply`ing
+- `list`: view all pull requests
 
 Storage  
 ==
